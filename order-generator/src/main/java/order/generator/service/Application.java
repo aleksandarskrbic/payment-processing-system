@@ -32,8 +32,7 @@ public final class Application {
             .map(Try::get)
             .map(ProducerOps::toProducerRecord)
             .runWith(Producer.plainSink(producerSettings), materializer);
-
-
+        
         completion.whenComplete((done, ex) -> system.terminate());
     }
 

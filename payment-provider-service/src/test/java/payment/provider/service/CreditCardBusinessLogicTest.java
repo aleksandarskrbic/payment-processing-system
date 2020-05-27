@@ -14,7 +14,7 @@ import payment.provider.service.service.CreditCardService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ServerTest {
+public final class CreditCardBusinessLogicTest {
 
     private CreditCardRepository creditCardRepository;
     private CreditCardService creditCardService;

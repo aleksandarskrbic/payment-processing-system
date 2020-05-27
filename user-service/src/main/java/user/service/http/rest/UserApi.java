@@ -19,10 +19,10 @@ public final class UserApi extends AllDirectives {
     }
 
     public Route routes() {
-        return concat(processPayment());
+        return concat(findUserByEmail());
     }
 
-    private Route processPayment() {
+    private Route findUserByEmail() {
         return get(() -> pathPrefix("user", () -> entity(Jackson.unmarshaller(UserByEmailRequest.class), request ->
             userService.findByEmail(request.email).fold(
                 errorMessage -> complete(StatusCodes.NOT_FOUND, apiError(errorMessage), Jackson.marshaller()),

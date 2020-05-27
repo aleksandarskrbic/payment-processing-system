@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.typesafe.akka', name: 'akka-http_2.12',   version: '10.1.12'
+    compile group: 'com.typesafe.akka', name: 'akka-stream_2.12', version: '2.5.26'
+    compile group: 'com.typesafe.akka', name: 'akka-http-jackson_2.12', version: '10.1.12'
+    compile group: 'io.vavr', name: 'vavr', version: '0.10.1'
+    testCompile 'junit:junit:4.12'
+    testImplementation "org.assertj:assertj-core:3.16.1"
+}

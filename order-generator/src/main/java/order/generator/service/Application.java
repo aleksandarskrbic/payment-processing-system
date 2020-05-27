@@ -32,11 +32,10 @@ public final class Application {
             .map(Try::get)
             .map(ProducerOps::toProducerRecord)
             .runWith(Producer.plainSink(producerSettings), materializer);
-        
+
         completion.whenComplete((done, ex) -> system.terminate());
     }
-
-
+    
     private static List<Order> orders = List.of(
         new Order("johh.doe@gmail.com", 100d),
         new Order("johh.doe@gmail.com", 10d),

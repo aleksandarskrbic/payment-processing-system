@@ -12,7 +12,6 @@ import akka.stream.javadsl.Source;
 import io.vavr.collection.List;
 import io.vavr.control.Try;
 import order.generator.service.model.Order;
-import order.generator.service.model.ProducerOps;
 
 public final class Application {
 

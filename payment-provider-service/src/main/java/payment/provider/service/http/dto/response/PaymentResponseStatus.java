@@ -1,4 +1,4 @@
-package user.service.http.dto.response;
+package payment.provider.service.http.dto.response;
 
 public enum  PaymentResponseStatus {
     PAYMENT_SUCCESSFUL,

@@ -1,4 +1,4 @@
-package user.service.http.dto.response.error;
+package payment.provider.service.http.dto.response.error;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

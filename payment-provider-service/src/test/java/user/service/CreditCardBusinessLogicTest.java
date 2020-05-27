@@ -1,4 +1,4 @@
-package user.service;
+package payment.provider.service;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,9 +8,9 @@ import io.vavr.control.Either.Right;
 import io.vavr.control.Option;
 import io.vavr.control.Option.None;
 import io.vavr.control.Option.Some;
-import user.service.model.CreditCard;
-import user.service.persistence.CreditCardRepository;
-import user.service.service.CreditCardService;
+import payment.provider.service.model.CreditCard;
+import payment.provider.service.persistence.CreditCardRepository;
+import payment.provider.service.service.CreditCardService;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

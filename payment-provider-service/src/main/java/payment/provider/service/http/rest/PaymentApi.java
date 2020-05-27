@@ -1,14 +1,14 @@
-package user.service.http.rest;
+package payment.provider.service.http.rest;
 
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.AllDirectives;
 import akka.http.javadsl.server.Route;
-import user.service.http.dto.request.PaymentRequest;
-import user.service.http.dto.response.PaymentResponse;
-import user.service.http.dto.response.PaymentResponseStatus;
-import user.service.http.dto.response.error.ApiError;
-import user.service.service.CreditCardService;
+import payment.provider.service.http.dto.request.PaymentRequest;
+import payment.provider.service.http.dto.response.PaymentResponse;
+import payment.provider.service.http.dto.response.PaymentResponseStatus;
+import payment.provider.service.http.dto.response.error.ApiError;
+import payment.provider.service.service.CreditCardService;
 
 public final class PaymentApi extends AllDirectives {
 

@@ -1,4 +1,4 @@
-package user.service.model;
+package payment.provider.service.model;
 
 import io.vavr.control.Either;
 

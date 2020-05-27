@@ -1,4 +1,4 @@
-package user.service.http.dto.request;
+package payment.provider.service.http.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

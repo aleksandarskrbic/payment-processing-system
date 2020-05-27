@@ -1,10 +1,10 @@
-package user.service.persistence;
+package payment.provider.service.persistence;
 
 import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 import io.vavr.control.Option;
-import user.service.model.CreditCard;
+import payment.provider.service.model.CreditCard;
 
 public final class CreditCardRepository {
 

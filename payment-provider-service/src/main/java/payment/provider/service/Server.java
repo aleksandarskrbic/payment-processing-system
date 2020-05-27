@@ -1,4 +1,4 @@
-package user.service;
+package payment.provider.service;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.CompletionStage;
@@ -12,9 +12,9 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 import io.vavr.control.Option;
-import user.service.http.rest.PaymentApi;
-import user.service.persistence.CreditCardRepository;
-import user.service.service.CreditCardService;
+import payment.provider.service.http.rest.PaymentApi;
+import payment.provider.service.persistence.CreditCardRepository;
+import payment.provider.service.service.CreditCardService;
 
 public final class Server {
 

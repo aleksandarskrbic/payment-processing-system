@@ -1,8 +1,8 @@
-package user.service.service;
+package payment.provider.service.service;
 
 import io.vavr.control.Either;
-import user.service.model.CreditCard;
-import user.service.persistence.CreditCardRepository;
+import payment.provider.service.model.CreditCard;
+import payment.provider.service.persistence.CreditCardRepository;
 
 public final class CreditCardService {
 

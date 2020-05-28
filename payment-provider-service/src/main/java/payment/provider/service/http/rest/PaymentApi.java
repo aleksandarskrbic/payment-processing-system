@@ -27,8 +27,8 @@ public final class PaymentApi extends AllDirectives {
             creditCardService.processPayment(request.accountId, request.amount).fold(
                 errorMessage -> complete(StatusCodes.NOT_FOUND, apiError(errorMessage), Jackson.marshaller()),
                 success -> success.fold(
-                    errorMessage -> complete(StatusCodes.BAD_REQUEST, failResponse(errorMessage), Jackson.marshaller()),
-                    successMessage -> complete(StatusCodes.OK, successResponse(successMessage), Jackson.marshaller())
+                    errorMessage -> complete(StatusCodes.BAD_REQUEST, failResponse(errorMessage, request), Jackson.marshaller()),
+                    successMessage -> complete(StatusCodes.OK, successResponse(successMessage, request), Jackson.marshaller())
                 )
             )
         )));
@@ -38,11 +38,11 @@ public final class PaymentApi extends AllDirectives {
         return new ApiError(message);
     }
 
-    private PaymentResponse successResponse(final String message) {
-        return new PaymentResponse(PaymentResponseStatus.PAYMENT_SUCCESSFUL, message);
+    private PaymentResponse successResponse(final String message, final PaymentRequest request) {
+        return new PaymentResponse(request.accountId, request.amount, PaymentResponseStatus.PAYMENT_SUCCESSFUL, message);
     }
 
-    private PaymentResponse failResponse(final String message) {
-        return new PaymentResponse(PaymentResponseStatus.PAYMENT_FAILED, message);
+    private PaymentResponse failResponse(final String message, final PaymentRequest request) {
+        return new PaymentResponse(request.accountId, request.amount, PaymentResponseStatus.PAYMENT_FAILED, message);
     }
 }

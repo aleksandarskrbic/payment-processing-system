@@ -20,7 +20,7 @@ public final class Application {
         final ActorMaterializer materializer = ActorMaterializer.create(system);
 
         final Config config = system.settings().config().getConfig("akka.kafka.producer");
-        final ProducerSettings<String, String> producerSettings =ProducerSettings.create(
+        final ProducerSettings<String, String> producerSettings = ProducerSettings.create(
             config,
             new StringSerializer(),
             new StringSerializer()
@@ -35,7 +35,7 @@ public final class Application {
 
         completion.whenComplete((done, ex) -> system.terminate());
     }
-    
+
     private static List<Order> orders = List.of(
         new Order("johh.doe@gmail.com", 100d),
         new Order("johh.doe@gmail.com", 10d),
